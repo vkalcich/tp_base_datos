@@ -16,31 +16,31 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `personas`
+-- Table structure for table `oradores`
 --
 
-DROP TABLE IF EXISTS `personas`;
+DROP TABLE IF EXISTS `oradores`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `personas` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nombre` varchar(40) DEFAULT NULL,
-  `apellido` varchar(40) DEFAULT NULL,
-  `edad` tinyint(2) DEFAULT NULL,
-  `fecha` timestamp NOT NULL DEFAULT current_timestamp(),
-  `provincia` varchar(30) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+CREATE TABLE `oradores` (
+  `id_orador` int(11) NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(50) DEFAULT NULL,
+  `apellido` varchar(50) DEFAULT NULL,
+  `mail` varchar(100) DEFAULT NULL,
+  `tema` varchar(255) DEFAULT NULL,
+  `fecha_alta` timestamp NOT NULL DEFAULT current_timestamp(),
+  PRIMARY KEY (`id_orador`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `personas`
+-- Dumping data for table `oradores`
 --
 
-LOCK TABLES `personas` WRITE;
-/*!40000 ALTER TABLE `personas` DISABLE KEYS */;
-INSERT INTO `personas` VALUES (1,'Victor','Kalcich',39,'1984-10-13 03:00:00','Buenos Aires'),(2,'Sofia','Kalcich',6,'2017-02-15 03:00:00','Buenos Aires'),(3,'Ivan','Kalcich',4,'2019-10-11 03:00:00','Buenos Aires'),(4,'Silvina','Abbate',44,'1979-05-25 03:00:00','Mendoza'),(5,'Raul','Kalcich',49,'1974-09-20 03:00:00','Buenos Aires');
-/*!40000 ALTER TABLE `personas` ENABLE KEYS */;
+LOCK TABLES `oradores` WRITE;
+/*!40000 ALTER TABLE `oradores` DISABLE KEYS */;
+INSERT INTO `oradores` VALUES (1,'Victor','Kalcich','vkalcich@example.com','Java','2023-12-01 13:00:00'),(2,'Victor','Kalcich','vkalcich@example.com','Spring','2023-12-02 13:00:00'),(3,'Mark','Zuckenberg','mzuckenberg@example.com','Meta','2023-12-01 12:00:00'),(4,'Bill','Gates','bgates@example.com','Microsoft','2023-12-02 12:00:00'),(5,'Silvina','Abbate','sabbate@example.com','Genética','2023-12-03 12:00:00');
+/*!40000 ALTER TABLE `oradores` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 
@@ -52,4 +52,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-10-29 17:15:32
+-- Dump completed on 2023-11-07 12:03:35
